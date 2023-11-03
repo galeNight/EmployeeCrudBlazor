@@ -9,6 +9,7 @@ namespace EmployeeCrudBlazor.Data
         public string Firstname { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
+        public string fullName => $"{Firstname} {MiddleName} {LastName}";
         public string PostalCode { get; set; }
         public string Address { get; set; }
         public string EmailAdress { get; set; }

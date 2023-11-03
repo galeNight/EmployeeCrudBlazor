@@ -16,14 +16,14 @@ namespace EmployeeCrudBlazor.Data
             return await _applicationDbContext.Employees.ToListAsync();
         }
         //add new employees
-        public async Task<bool> AddNewEmployees(Employee employee)
+        public async Task<bool> AddNewEmployee(Employee employee)
         {
             await _applicationDbContext.Employees.AddAsync(employee);
             await _applicationDbContext.SaveChangesAsync();
             return true;
         }
         // get employee record by id
-        public async Task<Employee> GeTEmployeeById(int id)
+        public async Task<Employee> GetEmployeeById(int id)
         {
             Employee employee = await _applicationDbContext.Employees.FirstOrDefaultAsync(x => x.Id == id);
             return employee;
